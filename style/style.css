@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;  
+}
+.menuItems{
+    
+    list-style: none;
+
+}
+.menuItems li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.menuItems li a{
+    text-decoration: none;
+    color: black; 
+    font-size: 20px;
+    text-transform: capitalize;
+    position:relative
+}
+.menuItems li a::before{
+    position:absolute;
+    content:"";
+
+    width:0;
+    height:50%;
+
+    top:0;
+    left:0;
+    opacity:0;
+    transition:0.5s;
+    border:1px solid black;
+    
+
+}
+.menuItems li a:hover::before{
+    width:100%;
+    height:100%;
+    opacity:1;
+
+}
+#home{
+    position: relative;
+    
+    
+}
+.submenu{
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: rgba(196, 215, 175, 0.705);
+    border: 1.5px solid rgb(143, 155, 129);
+    border-radius: 2px;
+    width: 400px;
+    transform: scale(0,0);
+    transition: 0.5s;
+    z-index:15;
+    /* height: 120px; */
+    /* align-items: center; */
+
+}
+#home:hover .submenu{
+    transform: scale(1,1);
+}
+
+.sublist {
+    display: inline-block;
+}
+.sublist .ltitle{
+    border-bottom:1px dotted black ;
+}
+
+.logoimg{
+    
+    width: 200px;
+    height: 100%;
+    float: left;
+} 
+.logoicons{
+    list-style: none;
+}
+.logoicons li{
+    display: inline-block;
+    font-weight: bold;
+
+    margin-left: 20px;
+}
+
+
+.logoicons li a{
+    text-decoration: none;
+    color: black; 
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+
+.secondSec{
+    background-image: url("https://www.wellpeople.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-w3llpeople-master/default/dw37d2dafb/2021/Supernatural%20Face%20Trio/093021_Stick-Trio_FB01_IGF_V02.jpg?sh=700&sw=700");
+    background-position: center;
+    background-size:contain;
+    margin: auto;
+    width: 80%;
+    height: 83vh;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+
+}
+.secondSec h1{
+    font-size: 60px;
+    font-weight: lighter;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+   
+}
+.secondSec button{
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: 1px solid black;
+    font-size: 19px;
+    text-transform: capitalize;
+    background-color: rgb(234, 245, 230);
+}
+
+
+
+
+
+.s3{
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    padding-top: 20px;
+    
+}
+.thirdSec{
+    /* padding-top:20px ; */
+    display:grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-column-gap: 15px;
+    width: 80%;
+    height:100%;
+    margin:auto;
+
+}
+.dh3{
+    
+    text-align: center;
+    font-size: 22px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.thirdSec img{
+    width: 300px;
+    height:400px;
+    margin: auto;
+
+}
+.thirdSec .content{
+    margin:auto;
+}
+.line3{
+    width: 60px;
+    margin: auto;
+    border: 1.5px solid rgb(208, 176, 156);
+    transition: 1s;
+}
+.dh3:hover .line3{
+    width: 115px;
+}
+.content{
+    transition:0.5s;
+}
+.content h2{
+    display: inline;
+}
+.content  i{
+    float: right;
+    display: inline;
+    font-size: 30px;
+    color: rgb(198, 211, 179);
+    visibility: hidden;
+    
+}
+.content:hover i{
+visibility: visible;
+}
+
+
+
+
+
+.s4{
+    width:100%;
+    height:35vh;
+    padding-top: 40px;
+}
+.fourthsec{
+    width:80%;
+    height:45%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 15px;
+    margin: auto;
+}
+.para{
+    grid-column: 1/3;
+    background-color: rgb(232, 238, 227);
+    width: 700px;
+    height: 250px;
+}
+.fimg1{
+    background-color: antiquewhite;
+    width: 350px;
+    height: 250px;
+    padding: 6px;
+    background-image:url(https://www.wellpeople.com/on/demandware.static/-/Library-Sites-w3llSharedLibrary/default/dw5f7e6178/2024/01/skincare_2_D-min.jpeg?new) ;
+    background-position: center;
+    background-size:contain;
+    transition: 1s;
+}
+.fimg1:hover,.fimg2:hover{
+    transform: scale(1.2,1.2);
+}
+.fimg2{
+    background-color:wheat;
+    width: 350px;
+    height: 250px;
+    padding: 6px;
+    background-image:url("https://www.wellpeople.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-w3llpeople-master/default/dw2ed0c7bc/2021/Best%20of%20Well%20starter%20kit/093021_Bestof-Starter-V1_IGF.jpg?sw=400&sh=400") ;
+    background-position: center;
+    background-size:contain;
+    transition: 1s;
+}
+.disc{
+  color: rgb(8, 10, 6);  
+  font-weight: lighter;
+  background-color: rgba(159, 200, 159, 0.516);
+  border-radius: 10px;
+  width:147px
+}
+.skin{
+    color:rgb(4, 4, 4);
+    background-color:rgba(255, 255, 255, 0.642); 
+    border-radius: 7px;
+    width:190px;
+    margin-top: 3px;
+}
+.para h1 {
+    display:inline;
+    color:rgb(11, 30, 11)
+}
+.para i{
+    font-size: larger;
+}
+.para span{
+    /* float: left; */
+    display: block;
+    margin-left:26px;
+}
+.para{
+    padding-left: 10px;
+    /* padding-top: 10px; */
+}
+.para p{
+    padding-top: 7px;
+}
+.dashedlines{
+    float: right;
+    width:60px;
+    margin-left: 5px;
+    display: inline;
+    margin-top: 15px;
+    margin-right: 8px;
+    border: 1.5px solid rgb(55, 74, 37);
+}
+
+
+
+.s5{
+    width:100%;
+    height:20vh;
+    
+   
+}
+.fifthcont{
+    width:80%;
+    height:auto;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: auto;
+    position: relative;
+    text-align: center;
+    transition:2s;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+    
+}
+.fifconts{
+    border-right: 1px solid black;
+}
+.fifimg1 , .fifimg2{
+    position: absolute;
+    /* margin: auto; */
+    transition:0.2s;
+    
+    
+}
+.fifimg1{
+    z-index: 10;
+    opacity: 1;
+}
+.fifimg2{
+    
+    opacity: 0;
+    transform: translateY(100%);
+}
+.fifconts:hover .fifimg1{
+    transform: translateY(-100%);
+    opacity: 0;
+    
+}
+.fifconts:hover .fifimg2{
+   
+    transform: translateY(0);
+    opacity: 1;
+    /* color: pink; */
+}
+.fifconts h3 {
+    padding-top: 60px;
+    background-color: white;
+    margin-left: 25px;
+    z-index: 1;
+}
+.fifconts p{
+    margin-left: 25px;
+    z-index: 1;
+    background-color: white;
+
+}
+.fifconts{
+    padding-right: 20px;
+}
+.last{
+    border-right:none ;
+}
+
+
+
+
+
+.s6{
+    width:100%;
+    height:100vh; 
+}
+.section6{
+     
+     display:grid;
+     grid-template-columns: repeat(3,1fr) ;
+     grid-column-gap: 15px;
+     grid-row-gap:30px;
+     position: relative;
+     padding-top:10px;
+     width: 80%;
+     height:100%;
+     margin:auto;
+}
+.menuItems2{
+    list-style: none;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    padding-right: 20px;
+   
+}
+.menuItems2 li{
+    display: inline-block;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing:2px;
+}
+.overlay{
+    position: relative;
+    transform: scaleX(0); /* Add this line */
+    opacity: 0.7;
+    /* Add this line */
+    /* transform: rotateX(90deg); */
+}
+.s6divs:hover .overlay{
+    transform: scaleX(1);
+    
+}
+.s6img1,.s6img2{
+    height: 450px;
+    width:350px;
+}
+/* .s6divs{
+    transition: 1s;
+} */
+.s6img1, .overlay{
+    transition: 0.5s;
+}
+.s6img1, .s6img2{
+    position: absolute;
+    
+}
+.iconslist{
+    position: absolute;
+    list-style: none;
+    margin: auto; 
+    /* text-align: center; */
+    padding-top: 225px;
+    padding-left:150px;
+   
+}
+.iconslist li{
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(8, 37, 8);
+}
+.s6bottomdiv{
+    padding-top: 500px;
+}
+.starslist{
+    list-style: none;
+
+}
+.starslist li{
+    display: inline-block;
+    color: rgb(55, 79, 55);
+}
+
+
+
+
+
+
+
